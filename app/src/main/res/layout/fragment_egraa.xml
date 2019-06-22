@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layoutDirection="rtl"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/primaryColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="rtl"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:src="@mipmap/user" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:src="@mipmap/time" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:src="@mipmap/dollar" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:src="@mipmap/web" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:src="@mipmap/hands" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/line1"
+        android:background="@color/transparent"
+        android:layoutDirection="rtl"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/nationalityTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="11dp"
+            android:text="غير محدد"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/durationTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center"
+            android:text="غير محدد"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="11dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/feesTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:text="غير محدد"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="11dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/onlineServiceTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center"
+            android:text="غير متاح"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="11dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/negotiabilityTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:text="غير متاح"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="11dp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/StepsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2"
+        android:layout_marginTop="16dp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/jozoor_font"
+        android:text="   الخطوات"
+        android:textColor="@color/primaryColor"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/StepsTV"
+        android:layout_marginBottom="4dp">
+
+        <android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/constraintLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/stepsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/NoStepsTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/jozoor_font"
+        android:gravity="center"
+        android:text="لا يوجد خطوات لعرضها"
+        android:textColor="@color/primaryColor"
+        android:textSize="25dp"
+        android:visibility="gone" />
+</RelativeLayout>

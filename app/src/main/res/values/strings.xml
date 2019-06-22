@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">الْإِجْرَاءَاتُ السُّعُودِيَّةُ</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="tab_text_1">بيانات الموقع</string>
+    <string name="tab_text_2">مرفقات</string>
+    <string name="tab_text_3">إجراءات</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="sectors">sectors</string>
+    <string name="sector_name">sectorName</string>
+    <string name="services">services</string>
+    <string name="ministries">ministries</string>
+</resources>

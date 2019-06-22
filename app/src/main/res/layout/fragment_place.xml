@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/infoTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/jozoor_font"
+        android:text="   بيانات الموقع"
+        android:textColor="@color/primaryColor"
+        android:textSize="20sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoTV">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/locationTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/infoTV"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="5"
+                android:background="@drawable/text"
+                android:drawableRight="@drawable/places"
+                android:gravity="center"
+                android:lines="2"
+                android:text="الموقع على الخريطة غير متاح"
+                android:textSize="18dp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/roboto_bold"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/webTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationTV"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="5"
+                android:background="@drawable/text"
+                android:drawableRight="@drawable/web"
+                android:gravity="center"
+                android:lines="2"
+                android:text="لا يوجد موقع الكترونى"
+                android:textSize="18dp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/roboto_bold"
+                android:textStyle="bold|italic"/>
+
+            <TextView
+                android:id="@+id/hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/webTV"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="40dp"
+                android:drawableRight="@drawable/date"
+                android:gravity="center"
+                android:text="  ساعات عمل المنشأة"
+                android:textSize="18dp"
+                android:background="@color/transparent"
+                android:textColor="@color/primaryColor"
+                android:fontFamily="@font/roboto_bold"
+                android:textStyle="bold|italic"/>
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hours"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="32dp"
+                android:orientation="horizontal"
+                android:weightSum="8">
+
+
+                <TextView
+                    android:id="@+id/to"
+                    style="@style/sectionHeader"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="3.5"
+                    android:gravity="center"
+                    android:text="2:30 م"
+                    android:textSize="18dp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textStyle="bold|italic"
+                    android:textColorHint="@android:color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/from"
+                    style="@style/sectionHeader"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="3.5"
+                    android:gravity="center"
+                    android:text="7:00 ص"
+                    android:textSize="18dp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textStyle="bold|italic"
+                    android:textColorHint="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
